@@ -70,11 +70,6 @@ Also include qualitative examples of:
 | Fine-tuned ResNet-50         | TODO      | TODO      | TODO     |
 | ViT / CLIP (fine-tuned)      | TODO      | TODO      | TODO     |
 
-Discussion: 
--What worked well?
--Typical error modes
--Limitations: small dataset size, single label assumption, safety critical errors
-
 How to Run
 Download the dataset and place it under data/.
 Install dependencies: pip install -r requirements.txt
