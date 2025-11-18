@@ -42,7 +42,7 @@ ML approaches to compare:
   -first, train only the final layer
   -then optionally unfreeze last 1-2 blocks and continue training with a smaller LR.
 -Regularization: data augmentation to simulate real-world variation
-3. Vision Transformer or CLIP based approach
+3. Model 3: Vision Transformer or CLIP based approach
 -Pick one:
 -Option A: ViT (vision transformer)
   -use vit_b_16 or similar from timm/torchvision
