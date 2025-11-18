@@ -22,12 +22,17 @@ Preprocessing: Resize to 224x224. Normalize with ImageNet means/stds
 Loss function: Cross entropy loss for multi class classification
 
 Training procedure: 
+
 Optimizer: Adam or SGD with momentum
+
 Learning rate schedule: step decay or cosine schedule
+
 Epochs: 10-30 with early stopping on validation loss
+
 Batch size: 32-128
 
 ML approaches to compare:
+
 1. Model 1-Baseline: Linear classifier on frozen features
 use a pretrained CNN
 freeze all convolutional layers
@@ -35,6 +40,7 @@ extract features from the penultimate layer, then train:
 logistic regression or
 linear SVM
 this gives us a simple baseline and separation between "feature extraction" and "classifier"
+
 2. Model 2-fine tuned CNN
 start from a pretrained ResNet-50
 replace the final fully connected layer with a K class output
@@ -42,6 +48,7 @@ Fine tune:
    first, train only the final layer
    then optionally unfreeze last 1-2 blocks and continue training with a smaller LR.
 Regularization: data augmentation to simulate real-world variation
+
 3. Model 3: Vision Transformer or CLIP based approach
 Pick one:
 Option A: ViT (vision transformer)
@@ -53,15 +60,25 @@ Option B: CLIP zero shot vs CLIP fine tuned
    then optionally fine tune a lightweight classifier on top of CLIP's image embeddings
 
  **Evaluation:** Models are evaluated using top-1 and top-5 accuracy, macro-F1, confusion matrices, and qualitative error analysis. We discuss how misclassifications might affect visually impaired users in real assistive scenarios.
+ 
 Evaluation: We report the following metrics on the held out teset set:
+
 Top 1 accuracy
+
 Top 5 accuracy
+
 Macro F1 score
+
 per class accuracy
+
 confusion matrix visualizations
+
 Also include qualitative examples of:
+
 Correct predictions on difficult images
+
 failure cases that would be problematic for visually impaired users
+
 **Outcome:** Fine-tuning a modern CNN significantly improves accuracy over the baseline, but the dataset remains challenging, highlighting gaps between standard benchmarks and accessibility-focused applications.
 
 | Model                        | Top-1 Acc | Top-5 Acc | Macro-F1 |
@@ -71,7 +88,11 @@ failure cases that would be problematic for visually impaired users
 | ViT / CLIP (fine-tuned)      | TODO      | TODO      | TODO     |
 
 How to Run
+
 Download the dataset and place it under data/.
+
 Install dependencies: pip install -r requirements.txt
+
 Train a model: python train.py ...
+
 Evaluate: python eval.py ...
