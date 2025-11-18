@@ -75,7 +75,7 @@ Discussion:
 -Typical error modes
 -Limitations: small dataset size, single label assumption, safety critical errors
 
-8. How to Run
+How to Run
 Download the dataset and place it under data/.
 Install dependencies: pip install -r requirements.txt
 Train a model: python train.py ...
