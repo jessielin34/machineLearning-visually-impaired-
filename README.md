@@ -80,19 +80,3 @@ Correct predictions on difficult images
 failure cases that would be problematic for visually impaired users
 
 **Outcome:** Fine-tuning a modern CNN significantly improves accuracy over the baseline, but the dataset remains challenging, highlighting gaps between standard benchmarks and accessibility-focused applications.
-
-| Model                        | Top-1 Acc | Top-5 Acc | Macro-F1 |
-| ---------------------------- | --------- | --------- | -------- |
-| Linear on ResNet-18 features | TODO      | TODO      | TODO     |
-| Fine-tuned ResNet-50         | TODO      | TODO      | TODO     |
-| ViT / CLIP (fine-tuned)      | TODO      | TODO      | TODO     |
-
-How to Run
-
-Download the dataset and place it under data/.
-
-Install dependencies: pip install -r requirements.txt
-
-Train a model: python train.py ...
-
-Evaluate: python eval.py ...
